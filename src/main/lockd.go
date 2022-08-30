@@ -1,5 +1,6 @@
 package main
 
+
 // export GOPATH=~/6.824
 // go build lockd.go
 // go build lockc.go

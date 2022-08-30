@@ -8,7 +8,7 @@ package main
 // go build -buildmode=plugin crash.go
 //
 
-import "6.824/mr"
+import "6.824/util"
 import crand "crypto/rand"
 import "math/big"
 import "strings"
@@ -31,14 +31,14 @@ func maybeCrash() {
 	}
 }
 
-func Map(filename string, contents string) []mr.KeyValue {
+func Map(filename string, contents string) []util.KeyValue {
 	maybeCrash()
 
-	kva := []mr.KeyValue{}
-	kva = append(kva, mr.KeyValue{"a", filename})
-	kva = append(kva, mr.KeyValue{"b", strconv.Itoa(len(filename))})
-	kva = append(kva, mr.KeyValue{"c", strconv.Itoa(len(contents))})
-	kva = append(kva, mr.KeyValue{"d", "xyzzy"})
+	kva := []util.KeyValue{}
+	kva = append(kva, util.KeyValue{"a", filename})
+	kva = append(kva, util.KeyValue{"b", strconv.Itoa(len(filename))})
+	kva = append(kva, util.KeyValue{"c", strconv.Itoa(len(contents))})
+	kva = append(kva, util.KeyValue{"d", "xyzzy"})
 	return kva
 }
 
